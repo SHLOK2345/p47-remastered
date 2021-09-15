@@ -52,6 +52,7 @@ if(bird1.body.isTouching(obstacleGroup)){
   if(frameCount % 80===0){
    obstacle1=new Obstacle()
    obstacleGroup.add(obstacle1.body)
+   obstacleGroup.add(obstacle1.body2)
    obstacleGroup.add(obstacle1.body3)
    obstacleGroup.add(obstacle1.body4)
   }
@@ -68,8 +69,12 @@ if(bird1.body.isTouching(obstacleGroup)){
 
    
  }
- 
- if(bird1.body.y>height){
+obstacle1.body.velocityX-=score/1000
+obstacle1.body2.velocityX-=score/1000
+obstacle1.body3.velocityX-=score/1000
+obstacle1.body4.velocityX-=score/1000
+
+ if(bird1.body.y>height || bird1.body.y<0){
    gameState="END"
  }
 

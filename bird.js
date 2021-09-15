@@ -7,7 +7,8 @@ class Bird{
     this.body.addImage(this.image)
     this.body.scale=0.05
 
-    
+    this.body.debug=true
+    this.body.setCollider("circle",0,0,100)
     }
 
     display(){
